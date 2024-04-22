@@ -14,15 +14,17 @@ This is a helper repository for Cloud Workshop, that will be presented as a part
 - Other services
 
 2. Practical part. We will demonstrate cloud on example of Google Cloud. Practical part will include:
-- Demonstration of running simple VM and exposing simple web application to the internet. Virtual Machine of GCP will be used.
-- Making a container with application and running the container in Cloud.  
+- Demonstration of running simple VM and exposing simple web application to the internet. Virtual Machine of Google Cloud will be used.
+- Making a container with application and running the container in Cloud. Cloud Run of Google Cloud will be used.
 
 ## This Repository contains
 
-Index and overview, slides and practical example codes for cloud workshop
+- Index and overview
+- slides
+- sample application with needed scripts
 
 ## Sample applications
 
 1. Simple app: Web application on flask with "Hello world!"
 
-2. App for containerization: Web application on flask with *numpy* that will do some complicated calculation on entered data, and out put them.  
+2. App for containerization: Web application on flask with *numpy* that will do some complicated calculation on entered data, and output them.  
