@@ -118,6 +118,7 @@ After discussion, the workshop instructor provides an understandable answer if n
 
 - Introduction to the [cloud learning objectives](README.md#cloud-technology).
 - What cloud is. Difference between local infrastructure and clouds. 
+- (Optional) Discussion - what cloud services we use daily?
 - History note. GCP, AWS, Azure.
 - Types of cloud services: IaaS, PaaS, SaaS.
 - Example of deployed application (explanation and scheme of online shopping application working in the cloud)
