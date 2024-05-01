@@ -6,11 +6,11 @@
     <title>Index</title>
 </head>
 <body>
-    <h1> <img src="/img/mit.png" alt="MIT Logo"> Hello !</h1>
+    <h1> <img src="/img/mit.png" alt="MIT Logo"> Hello {{ processed_data1 }}!</h1>
     <br>
-    <form action="/welcome" method="post">
-        <label for="name">Please enter your name:</label>
-        <input type="text" id="name" name="Username" required>
+    <form action="/computation" method="post">
+        <label for="input1">Input field (your name):</label>
+        <input type="text" id="input1" name="input_data1" required>
         <input type="submit" value="Submit">
     </form>
 </body>

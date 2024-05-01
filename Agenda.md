@@ -1,2 +1,0 @@
-# Cloud workshop agenda
-
