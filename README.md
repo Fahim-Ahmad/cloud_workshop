@@ -26,6 +26,7 @@ After the workshop:
     - Storage
     - Networking
 - You understand load balancing and scalability.
+- You know how to control and limit your costs in Cloud
 - You know how the Cloud could be used for ML and Data Science.
 
 ### Deployment
@@ -121,6 +122,6 @@ In the end, you will obtain an IP address with a working application you can sha
 - Examples / Case studies
 - Cloud for ML and AI
 
-### Questions and thank you
+### Questions
 
 > ~ 5 mins
