@@ -15,7 +15,10 @@ def process_linear(data_string:str,degree:str,x_argument:str)->str:
     In case of wrong input returns string "Error processing input"
 
     >>> process_linear("(1,1),(2,2),(3,3)","1","4")
-    "4"
+    "4.000000000000001"
+    
+    >>> process_linear("(1,1.2),(2,2.8),(3,8.2)","2","4")
+    "17.400000000000016"
     
     >>> process_linear((4,3),"d","3")
     "Error processing input"

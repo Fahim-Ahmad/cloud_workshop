@@ -64,15 +64,25 @@ Basic part:
 
 - 🥚 Create a free account on the [Google Cloud Platform](https://cloud.google.com/?hl=en).
 - 🥚 Spend some time there to explore the interface.
+
+
+🥚 [**You can watch guide video 1, covering the basic preparation work for Google Cloud Platform**](https://drive.google.com/file/d/1palgfhF2oDtJNOHNVLKc7gaqhriFsTS9/view?usp=drive_link)
+
 - 🥚 Read about web applications.
 - 🥚🥚 Get the general understanding of Flask framework.
 
-🥚 **You can watch guide video, covering the basic preparation work *[...will be here soon...]***
+
+🥚 [**You can watch guide video 2, about web application and explanation of Flask framework**](https://drive.google.com/file/d/1M4OA7-_yBLbbq6_ukxWJXdKjbbGMiSRk/view?usp=drive_link)
 
 Advanced part. During the workshop you will work in small groups to deploy a simple web application, similar to the demonstration part. If you find this interesting, you can get more out of the workshop and prepare your own code as a web application for deployment. 
 - ✔️ Explore provided [basic Flask application](helloworld). 
 - ✔️ Modify the code of the `my_basic_computation` function in the `app.py` module, edit the HTML template to add your desired functionality. 
-- ✔️ If you are using additional packages for your app, add them to `requirements.txt`.
+- ✔️ If you are using additional packages for your app, add them to `requirements.txt`. Run this command from your application directory and it will make `requirements.txt` with only modules you use
+```bash
+pip install pipreqs
+pipreqs .
+```
+if you face some issues there is a classic way for generating `requirements.txt`, but it may generate a bigger file:
 ```bash
 pip freeze > requirements.txt
 ```
@@ -86,7 +96,7 @@ flask run
 ```
 - ✔️ Ensuring your web application is working properly.
 
-✔️ **You can watch guide video, with example of making a simple Flask application *[...will be here soon...]***
+✔️ [**You can watch guide video 3, with example of making a simple Flask application**](https://drive.google.com/file/d/1bCbOs40nZXfOggHYOHZQxJyG3pqSViIp/view?usp=drive_link)
 
 
 ## Workshop Outline
