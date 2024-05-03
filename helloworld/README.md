@@ -1,6 +1,6 @@
 # [Helloworld Application](helloworld)
 
-![application](../imgs/app_screenshot.png)
+![application](../images/app_screenshot.png)
 
 Simple web application on Flask with "Hello world!" and a form input field for a username. The "Submit" button sends a POST request with the name, resulting in a "Hello \<Username\>!" response. The name is modified using the `str.title()` method, capitalizing the name, for basic functionality. Includes a Python file, an HTML template, and an image in a subfolder. 
 

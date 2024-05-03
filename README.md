@@ -157,6 +157,7 @@ After breakout:
 - Note about Cloud costs, free tier, billing, and setting limits
 - Cloud services: Computing, Storage, Networking
 - Cloud for ML and AI
+- Containers, CI/CD, Kubernetes
 - Load balancing and Scalability of the Cloud
 - Examples / Case studies - big scale services, deployed in Cloud. (i.e. Spotify)
 
