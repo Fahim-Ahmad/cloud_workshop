@@ -193,7 +193,7 @@ pip install -r requirements.txt
 We will use gunicorn for running flask application. 
 It is a production server that provides better performance and scalability and is a common practice.
 
-Lets **FINALLY** run our application
+Lets run our application
 
 ```bash
 sudo venv/bin/python -m gunicorn -b 0.0.0.0:80 app:app
@@ -268,11 +268,11 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
-![alt text](images/Deployment/image-46.png)
+![alt text](images/Deployment/image-51.png)
 
 Press Ctrl-X to exit. Press **Y** to save the file, and **Enter** to confirm
 
-![alt text](images/Deployment/image-47.png)
+![alt text](images/Deployment/image-52.png)
 
 Add your user to SUDOER list (grant him admin rights for this task).
 Run
@@ -280,6 +280,11 @@ Run
 sudo visudo
 ```
 Scroll down and below `root    ALL=(ALL:ALL) ALL` add this line `sirius7_ai ALL=(ALL) NOPASSWD: /home/sirius7_ai/cloud_workshop/helloworld/venv/bin/python3`, replacing username and directory name
+```
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+sirius7_ai ALL=(ALL) NOPASSWD: /home/sirius7_ai/cloud_workshop/helloworld/venv/bin/python3
+```
 
 ![alt text](images/Deployment/image-50.png)
 
@@ -329,39 +334,25 @@ Google Cloud does not provide hostname. If you have hostname you can use a Cloud
 
 ## 3. Continuous Deployment
 
-For a presented way of deployment there are several Continuous Integration/ Continuous Deployment options. They are a bit of the scope, but here is some of them listed:
-1. Manual. Just git pull and restart the service:
+For a presented way of deployment there are several Continuous Integration/ Continuous Deployment options. They are a bit of the scope, but here is some of the options:
+1. Manual. This approach doesn't require any additional tools or applications beyond Git for version control and the necessary scripts or commands to pull changes from the repository and restart the application.Just git pull and restart the service:
 ```bash
 git pull
 sudo systemctl restart demo.service
 ```
 This could be made as a script for usability
+
 2. Git Webhooks:
 You'll need a webhook receiver application or service running on your VM to receive payloads from the Git repository whenever changes are made. This could be a simple web server or an application designed to handle webhook events.
-3. Git Webhooks:
+
+3. CI/CD Pipeline with Jenkins, GitLab CI/CD, or GitHub Actions::
 You'll need a webhook receiver application or service running on your VM to receive payloads from the Git repository whenever changes are made. This could be a simple web server or an application designed to handle webhook events.
 
 ## 4. Containers
 
-Containers are like virtual machines, but lighter and more flexible. They package everything an app needs to run - code, runtime, libraries - into a single unit that can run anywhere. While they're a bit trickier to learn than traditional VMs, they offer some cool benefits.
+Containers are like virtual machines, but lighter and more flexible. They package everything an app needs to run - code, runtime, libraries - into a single unit that can run anywhere. While they're a bit trickier to learn than traditional VMs. You need to know what is Docker and how it works to use them, and they offer some benefits.
 
-**Pros**:
+Google Cloud has some tools to make container deployment easier:
 
-- **Consistency**: Apps behave the same way in any environment.
-- **Isolation**: Each container runs independently, avoiding conflicts.
-- **Portability**: Easy to move between different setups, like your laptop and the cloud.
-- **Scalability**: You can easily run multiple copies of your app to handle more traffic.
-
-**Cons**:
-
-- **Learning Curve**: Takes some time to get used to.
-- **Resource Overhead**: Requires more resources compared to VMs.
-- **Security**: Needs careful setup to avoid risks.
-- **Complexity**: Managing lots of containers can get tricky.
-
-Google Cloud has some cool tools to make container deployment easier:
-
-- **Cloud Run**: Lets you deploy containers without worrying about the server.
-- **Cloud Build**: Handles the building and deploying of your containers automatically.
-
-In short, containers are great for flexibility and consistency, but they come with some challenges. Luckily, services like Cloud Run and Cloud Build make it easier to manage.
+- **Cloud Run**: Lets you deploy containers in a easy way.
+- **Cloud Build**: Handles the creating of containers and CI/CD pipelines.
