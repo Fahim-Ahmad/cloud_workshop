@@ -25,7 +25,7 @@ This deployment is based on this [Google App Engine Standard for Python3 documen
 10. [Visit just created endpoint of your application](#10-visit-just-created-endpoint-of-your-application)
 11. [Explore Google Cloud App Engine Console with information and logs](#11-explore-google-cloud-app-engine-console-with-information-and-logs)
 12. [Modifying app](#12-modifying-app)
-13. [Shutting application down (optional)](#13-shutting-application-down)
+13. [Shutting application down](#13-shutting-application-down)
 14. [Advanced topics](#14-advanced-topics)
     1. [Updating your application, CI/CD](#141-updating-your-application-cicd)
     2. [Storage options](#142-storage-options)
