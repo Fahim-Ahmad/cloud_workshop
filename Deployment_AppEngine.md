@@ -7,9 +7,9 @@ This manual is for using cloud services of [Google Cloud platform (GCP)](https:/
 
 # Deployment using Google Cloud App Engine
 
-In this manual you will go step-by-step process of deploying web flask application to Google Cloud App Engine. We will use Standard Environment of App Engine, and configure our app for minimal resource usage. 
+In this manual, you will go through a step-by-step process of deploying web flask application to Google Cloud App Engine. We will use Standard Environment of App Engine, and configure our app for minimal resource usage. 
 
-This deployment is based on this [Google App Engine Standard for Python3 documentation](https://cloud.google.com/appengine/docs/standard/python3/runtime). 
+This deployment is based on the [Google App Engine Standard for Python3 documentation](https://cloud.google.com/appengine/docs/standard/python3/runtime). 
 
 ## Table of Contents
 
@@ -45,9 +45,9 @@ You will need to enter your personal data, and credit card for validation, no mo
 
 You also must specify Tax information: "Personal"
 
-**NOTE:** on payments and costs: GCP it requires you credit card to register. It offers [3 month free use, and 300$ credits](https://cloud.google.com/free/docs/free-cloud-features). After free use ends you will not be charged, unless you willingly switch to paid account. So before 3 month trial ends you have nothing to worry about. 
+**NOTE**: On payments and costs: GCP requires your credit card to register. It offers [3 month free use, and 300$ credits](https://cloud.google.com/free/docs/free-cloud-features). After free use ends you will not be charged, unless you willingly switch to paid account. So before 3 month trial ends you have nothing to worry about. 
 
-After that, if you switch to paid there is some thing you need to know: there is a so called [free tier](https://cloud.google.com/free/docs/free-cloud-features), thar offer a considerable amount of services for free. For example it offer running of F1 machine, that we will use for our App Engine Deployment, for total of 28 hours per day.  Having pet project hosted with low performance options costs little, but you have to be careful. By mistake on unknowing you may switch on some costly service you can get charged, so what you should do is set the budget limit in the cloud for example for $1 - %5, so if you reach this amount you will receive e-mail with notification. Setting a budget limit is shown in the tutorial1 video. 
+After that, if you switch to paid there is some thing you need to know: there is a so called [free tier](https://cloud.google.com/free/docs/free-cloud-features), that offer a considerable number of services for free. For example it offer running of F1 machine, that we will use for our App Engine Deployment, for total of 28 hours per day.  Having pet project hosted with low performance options costs little, but you have to be careful. By mistake on unknowing you may switch on some costly service you can get charged, so what you should do is set the budget limit in the cloud for example for $1 - %5, so if you reach this amount you will receive e-mail with notification. Setting a budget limit is shown in the tutorial_1 video. 
 
 ## 2. Enter Google Cloud Shell 
 
@@ -85,7 +85,7 @@ You are authorized.
 
 ## 4. Clone your project with Git
 
-Type commands (replace with your repo)
+Type commands (replace with your repo):
 ```bash
 git clone https://github.com/MIT-Emerging-Talent/cloud_workshop
 ```
@@ -120,7 +120,7 @@ Flask==3.0.3
 ```
 As in this `helloworld` app. If you use additional libs they should be here.
 
-So you will need to rename `app.py` into `main.py`.
+So you will need to rename `app.py` to `main.py`.
 You will need to create `app.yaml` with deployment configuration.
 You will need to add `img\` to this configuration file, so application will be able to work with the static files from this folder 
 > Note: it is a common way to have all static files in `static\` but now is would require changing code and templates.
@@ -140,19 +140,19 @@ This editor look a lot like VSCode, so navigating there should not be a problem.
 
 ## 8. Prepare your application for deployment
 
-Let' navigate to our `helloworld` folder with application.
+Let's navigate to our `helloworld` folder with application.
 
 ![alt text](images/Deployment_AppEngine/image-42.png)
 
-First thing let's rename `app.py` to `main.py`, as required by App Engine.
+First, let's rename `app.py` to `main.py`, as required by App Engine.
 
 ![alt text](images/Deployment_AppEngine/image-11.png)
 
 ![alt text](images/Deployment_AppEngine/image-12.png)
 
-Now let's create `app.yaml`, that is the main configuration for App
+Now let's create `app.yaml`, that is the main configuration for App.
 
-Press **New file**
+Press **New file**.
 
 ![alt text](images/Deployment_AppEngine/image-43.png)
 
@@ -232,21 +232,21 @@ Now lets run the cloud command to deploy our app
 ```bash
 gcloud app deploy
 ```
-It may ask you for the region for creating your deployment
+It may ask you for the region to create your deployment.
 
 ![alt text](images/Deployment_AppEngine/image-30.png)
 
 You can basically choose any region, you may prefer region closer to you. Select **17** us-central for example.
 
-After that, it will ask confirmation:
+After that, it will ask for confirmation:
 
 ![alt text](images/Deployment_AppEngine/image-51.png)
 
-Press Y and you will see the app is being deployed
+Press Y, and you will see the app is being deployed.
 
 ![alt text](images/Deployment_AppEngine/image-52.png)
 
-And after a while it is done:
+And after a while, it is done:
 
 ![alt text](images/Deployment_AppEngine/image-53.png)
 
@@ -266,7 +266,7 @@ The app is working!
 
 ![alt text](images/Deployment_AppEngine/image-56.png)
 
-Lets try to input data, and see if out code modification works:
+Let's try to input data and see if our code modification works:
 
 ![alt text](images/Deployment_AppEngine/image-57.png)
 
@@ -275,11 +275,11 @@ Lets try to input data, and see if out code modification works:
 
 ## 11. Explore Google Cloud App Engine Console with information and logs
 
-Return to Google Cloud Platform Console tab. You should still be in the terminal. Close the terminal by pressing "X" on the top right of the terminal window. 
+Return to the Google Cloud Platform Console tab. You should still be in the terminal. Close the terminal by pressing "X" on the top right of the terminal window. 
 
 ![alt text](images/Deployment_AppEngine/image-59.png)
 
-Enter the Search box and type App Engine
+Enter the Search box and type **App Engine**
 
 ![alt text](images/Deployment_AppEngine/image-60.png)
 
@@ -289,11 +289,11 @@ You see the dashboard for this service
 
 ![alt text](images/Deployment_AppEngine/image-61.png)
 
-In the summary you can see that our app received several requests and now it is idle. If you refresh the tab with app several time, and then refresh this page this is what you will see:
+In the summary, you can see that our app received several requests and is now idle. If you refresh the tab with app several time, and then refresh this page this is what you will see:
 
 ![alt text](images/Deployment_AppEngine/image-62.png)
 
-On the navigation plane to the right you can navigate to a different components of App Engine. For example in **Instances** you can see the VM running your app. In the **Version** you can see and modify versions of your app.
+On the navigation panel to the right, you can navigate to different components of App Engine. For example in **Instances** you can see the VM running your app. In the **Version** you can see and modify versions of your app.
 
 ## 12. Modifying app
 
@@ -336,13 +336,13 @@ Click on Disable Application.
 
 ![alt text](images/Deployment_AppEngine/image-72.png)
 
-Enter you app ID (same as project ID) (it is shown next to the App Id field)
+Enter your app ID (same as project ID) (it is shown next to the App ID field).
 
 ![alt text](images/Deployment_AppEngine/image-73.png)
 
 ![alt text](images/Deployment_AppEngine/image-74.png)
 
-You can Enable your application in any time.
+You can enable your application at any time.
 
 ## 14. Advanced topics:
 
@@ -371,4 +371,4 @@ Note that App Engine deployment are stateless. There is no way for them to store
 - Cloud SQL: As a fully managed relational database service, Cloud SQL enables App Engine applications to leverage the power of traditional SQL databases like MySQL, PostgreSQL, and SQL Server. With Cloud SQL, developers can easily create, manage, and scale relational databases without worrying about infrastructure management. 
 
 To use this option you will need to use API and corresponding libraries in your code. More info could be read in [documentation](https://cloud.google.com/appengine/docs/standard/storage-options).
-Notice that options may incur cost after free trial period, but also have a free tier amount.
+Note that options may incur costs after the free trial period, but some of them also have an amount of free tier allowance.
