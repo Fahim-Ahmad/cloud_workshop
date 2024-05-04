@@ -253,7 +253,7 @@ And after a while, it is done:
 
 ## 10. Visit just created endpoint of your application
 
-Copy this [address](https://mitcloudworkshop.uc.r.appspot.com/computation) 
+Copy this [address](https://mitcloudworkshop.uc.r.appspot.com) 
 
 ![alt text](images/Deployment_AppEngine/image-54.png)
 
