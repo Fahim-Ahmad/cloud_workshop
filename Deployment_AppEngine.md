@@ -13,22 +13,22 @@ This deployment is based on this [Google App Engine Standard for Python3 documen
 
 ## Table of Contents
 
-1. [Create account and login to GCP](#create-account-and-login-to-gcp)
-2. [Enter Google Cloud Shell](#enter-google-cloud-shell)
-3. [Authorize to GCLOUD command line interface](#authorize-to-gcloud-command-line-interface)
-4. [Clone your project with Git](#clone-your-project-with-git)
-5. [Enter project folder and check context](#enter-project-folder-and-check-context)
-6. [App Engine application structure](#app-engine-application-structure)
-7. [Open Google Cloud Editor](#open-google-cloud-editor)
-8. [Prepare your application for deployment](#prepare-your-application-for-deployment)
-9. [App Engine Deployment](#app-engine-deployment)
-10. [Visit just created endpoint of your application](#visit-just-created-endpoint-of-your-application)
-11. [Explore Google Cloud App Engine Console with information and logs](#explore-google-cloud-app-engine-console-with-information-and-logs)
-12. [Modifying app](#modifying-app)
-13. [Shutting application down (optional)](#shutting-application-down-optional)
-14. [Advanced topics](#advanced-topics)
-    1. [Updating your application, CI/CD](#updating-your-application-ci-cd)
-    2. [Storage options](#storage-options)
+1. [Create account and login to GCP](#1-create-account-and-login-to-gcp)
+2. [Enter Google Cloud Shell](#2-enter-google-cloud-shell)
+3. [Authorize to GCLOUD command line interface](#3-authorize-to-gcloud-command-line-interface)
+4. [Clone your project with Git](#4-clone-your-project-with-git)
+5. [Enter project folder and check context](#5-enter-project-folder-and-check-context)
+6. [App Engine application structure](#6-app-engine-application-structure)
+7. [Open Google Cloud Editor](#7-open-google-cloud-editor)
+8. [Prepare your application for deployment](#8-prepare-your-application-for-deployment)
+9. [App Engine Deployment](#9-app-engine-deployment)
+10. [Visit just created endpoint of your application](#10-visit-just-created-endpoint-of-your-application)
+11. [Explore Google Cloud App Engine Console with information and logs](#11-explore-google-cloud-app-engine-console-with-information-and-logs)
+12. [Modifying app](#12-modifying-app)
+13. [Shutting application down (optional)](#13-shutting-application-down)
+14. [Advanced topics](#14-advanced-topics)
+    1. [Updating your application, CI/CD](#141-updating-your-application-cicd)
+    2. [Storage options](#142-storage-options)
 
 
 ## 1. Create account and login to GCP
@@ -81,7 +81,7 @@ It may take you you you to pop-up window where you will need to choose your corr
 
 ![alt text](images/Deployment_AppEngine/image-37.png)
 
-You are logged in.
+You are authorized.
 
 ## 4. Clone your project with Git
 
@@ -112,6 +112,13 @@ You should see the context of your application
 To deploy your application to App Engine app need to have structure similar to the picture, where `app.yaml` is a special configuration file for Google App Engine. You can check the [official docs](https://cloud.google.com/appengine/docs/standard/python3/building-app/writing-web-service#structuring_your_web_service_files) for reference.
 
 ![alt text](images/Deployment_AppEngine/image-6.png)
+
+It may contain other files, like python modules.
+In the requirements.txt there should at least one line for flask:
+```
+Flask==3.0.3
+```
+As in this `helloworld` app. If you use additional libs they should be here.
 
 So you will need to rename `app.py` into `main.py`.
 You will need to create `app.yaml` with deployment configuration.
@@ -286,7 +293,7 @@ In the summary you can see that our app received several requests and now it is 
 
 ![alt text](images/Deployment_AppEngine/image-62.png)
 
-On the navigation plane to the right you can navigate to a different components of App Engine. For example in **Instances** you can see the VM running your app. In the **Version** you can see and modify versions of your app (can be used while doing update).
+On the navigation plane to the right you can navigate to a different components of App Engine. For example in **Instances** you can see the VM running your app. In the **Version** you can see and modify versions of your app.
 
 ## 12. Modifying app
 
@@ -317,7 +324,7 @@ Check the app link to see if it has updated.
 ![alt text](images/Deployment_AppEngine/image-68.png)
 
 
-## 13. Shutting application down (optional)
+## 13. Shutting application down
 
 Close the terminal on Google Cloud Platform. Go the **Setting** page of **App Engine**.
 
@@ -350,7 +357,7 @@ gcloud app deploy
 ```
 
 - More advanced way is using CI/CD. Continuous Integration / Continuous Deployment is setting when pushes to main of local repository automatically updates running application. It require several step:
-    - Use Cloud Repositories. [You can make a Cloud Repositories that mirrors GitHub repository.](https://cloud.google.com/source-repositories/docs/mirroring-a-github-repository). Mirroring mean any changes to GitHub will automatically 
+    - Use Cloud Repositories. [You can make a Cloud Repositories that mirrors GitHub repository.](https://cloud.google.com/source-repositories/docs/mirroring-a-github-repository). Mirroring mean any changes to GitHub will automatically appear in Google Cloud Source Repository,
     - [Deploy an app from Cloud Source Repositories to App Engine](https://cloud.google.com/source-repositories/docs/deploy-app-engine)
     - [Automate App Engine deployments with Cloud Build](https://cloud.google.com/source-repositories/docs/automate-app-engine-deployments-cloud-build)
     - more info could be seen on the original documentation [here](https://cloud.google.com/source-repositories/docs/quickstarts) and [here](https://cloud.google.com/source-repositories/docs/integration-overview), or other sources.
