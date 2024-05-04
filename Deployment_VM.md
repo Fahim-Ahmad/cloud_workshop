@@ -3,9 +3,31 @@
 ![gcp logo](https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google_Cloud_logo.svg/330px-Google_Cloud_logo.svg.png)
 
 
-We will use [Google Cloud platform (GCP)](https://cloud.google.com/?hl=en) for this practical part.
+This manual is for using cloud services of [Google Cloud platform (GCP)](https://cloud.google.com/?hl=en).
 
-# Deployment to VM as persistent service
+# Deployment application to VM as persistent service
+
+In this manual there is a step-by-step procedure from creating account and starting a VM in Google Cloud, to entering this VM, cloning your app and installing needed programs, packages and services to a state when there is a permanent service with your working app on this VM. There is information on further topics, such as Static IP address for VM, hostname, CI/CD.
+
+## Overview:
+1. Ensuring your application is ready 
+2. Creating account and login to GCP
+3. Navigating to Compute section of GCP console
+4. Configuring VM we want to start
+5. Starting VM
+6. Login into VM with SSH
+7. Updating system and installing needed programs
+8. Cloning repository with git clone
+9. Installing packages
+10. Starting flask server with gunicorn for the first time and checking it works
+11. Configuring gunicorn as a service 
+12. Stopping / Deleting the VM
+
+### Advanced topics:
+1. Static IP
+2. Hostname
+3. Continuous Deployment
+
 
 ## 1. Ensuring your application is ready 
 
@@ -17,22 +39,22 @@ pip install -r requirements.txt  # or just use pip install flask, if you are usi
 flask run
 ```
 
-![alt text](images/Deployment/image_01.png)
+![alt text](images/Deployment_VM/image_01.png)
 
 If flask run properly you will be able to reach your app at this [address](http://127.0.0.1:5000/).
 
-![alt text](images/Deployment/image_02.png)
+![alt text](images/Deployment_VM/image_02.png)
 
 
 ## 2. Creating account and login to GCP
 
 Go to the [Google Cloud Platform](https://cloud.google.com/) site.
 
-![alt text](images/Deployment/image.png)
+![alt text](images/Deployment_VM/image.png)
 
 Press "Get started for free" and follow the registration process.
 
-![alt text](images/Deployment/image-1.png)
+![alt text](images/Deployment_VM/image-1.png)
 
 You will need to enter your personal data, and credit card for validation, no money will be charged.
 
@@ -44,42 +66,42 @@ After that, if you switch to paid there is some thing you need to know: there is
 
 After you log in you will get into the console. This is a web interface that allow us work with Cloud. 
 
-![alt text](images/Deployment/image-4.png)
+![alt text](images/Deployment_VM/image-4.png)
 
 You see an info panel with some metrics. On the left by pressing ≡ on the left right corner you can open the Navigational panel.
 
-![alt text](images/Deployment/image-2.png)
+![alt text](images/Deployment_VM/image-2.png)
 
 As you can see there is a lot of services. Let's now go the Compute Engine->VM where you can configure and start your Virtual Machine.
 
-![alt text](images/Deployment/image-3.png)
+![alt text](images/Deployment_VM/image-3.png)
 
 You may need to enable Compute Engine API 
 
-![alt text](images/Deployment/image-5.png)
+![alt text](images/Deployment_VM/image-5.png)
 
 
 ## 4. Configuring VM we want to start
 
-![alt text](images/Deployment/image-8.png)
+![alt text](images/Deployment_VM/image-8.png)
 
 In this section press "Create instance" and you will open to the new VM configuration page.
 
-![alt text](images/Deployment/image-7.png)
+![alt text](images/Deployment_VM/image-7.png)
 
 Configuration. Carefully check configuration, if you miss anything here you will probably face issues later:
 
 1. Enter instance name
 
-![alt text](images/Deployment/image-22.png)
+![alt text](images/Deployment_VM/image-22.png)
 
 2. For machine type select: **e2-micro**
 
-![alt text](images/Deployment/image-6.png)
+![alt text](images/Deployment_VM/image-6.png)
 
 3. Click on *Change* button in the **Boot disk** section
 
-![alt text](images/Deployment/image-20.png)
+![alt text](images/Deployment_VM/image-20.png)
 
 In the operation system select **"Ubuntu"**
 In the version select **Ubuntu 24.04 LTS x86/64**
@@ -87,43 +109,43 @@ In the version select **Ubuntu 24.04 LTS x86/64**
 
 Leave other fields to default and click **Select**
 
-![alt text](images/Deployment/image-26.png)
+![alt text](images/Deployment_VM/image-26.png)
 
 4. Enable check-boxes "*Allow HTTP traffic*" and "*Allow HTTPS traffic*" in the **Firewall** section
 
-![alt text](images/Deployment/image-9.png)
+![alt text](images/Deployment_VM/image-9.png)
 
 5. Leave other options to default and click "**CREATE**"
 
-![alt text](images/Deployment/image-27.png)
+![alt text](images/Deployment_VM/image-27.png)
 
 ## 5. Starting VM
 
-![alt text](images/Deployment/image-24.png)
+![alt text](images/Deployment_VM/image-24.png)
 
 You should see VM appears in the list, and starting. After it starts, you will see a green ✅ mark in Status.
 
-![alt text](images/Deployment/image-11.png)
+![alt text](images/Deployment_VM/image-11.png)
 
 Click on the name to enter the details of VM
 
-![alt text](images/Deployment/image-12.png)
+![alt text](images/Deployment_VM/image-12.png)
 
 ## 6. Login into VM with SSH
 
 Click on SSH button here. This will connect to this VM using SSH protocol.
 
-![alt text](images/Deployment/image-13.png)
+![alt text](images/Deployment_VM/image-13.png)
 
 You may be asked to authorize SSH
 
-![alt text](images/Deployment/image-28.png)
+![alt text](images/Deployment_VM/image-28.png)
 
 Note - in some cases it may require login in to your Google account in pop-up window
 
 After authorizing you shall see this VM terminal:
 
-![alt text](images/Deployment/image-29.png)
+![alt text](images/Deployment_VM/image-29.png)
 
 ## 7. Updating system and installing needed programs
 
@@ -139,7 +161,7 @@ sudo apt update
 sudo apt install python3-pip
 ```
 
-![alt text](images/Deployment/image-30.png)
+![alt text](images/Deployment_VM/image-30.png)
 
 It will ask you to confirm, so enter **Y**
 
@@ -154,7 +176,7 @@ sudo apt install gunicorn
 ```
 
 Now you have all you need
-![alt text](images/Deployment/image-44.png)
+![alt text](images/Deployment_VM/image-44.png)
 
 
 ## 8. Cloning repository with git clone
@@ -169,14 +191,14 @@ In your repository enter your application directory
 ```bash
 cd <your_repo_name>/<app_folder> #Replace with application directory
 ```
-![alt text](images/Deployment/image-33.png)
+![alt text](images/Deployment_VM/image-33.png)
 
 Now let's create a virtual environment with python, and activate it
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
-![alt text](images/Deployment/image-35.png)
+![alt text](images/Deployment_VM/image-35.png)
 
 ## 9. Installing packages
 
@@ -185,7 +207,7 @@ Now let's install required packages
 ```bash
 pip install -r requirements.txt
 ```
-![alt text](images/Deployment/image-36.png)
+![alt text](images/Deployment_VM/image-36.png)
 
 
 ## 10. Starting flask server with gunicorn for the first time and checking it works
@@ -198,32 +220,32 @@ Lets run our application
 ```bash
 sudo venv/bin/python -m gunicorn -b 0.0.0.0:80 app:app
 ```
-![alt text](images/Deployment/image-43.png)
+![alt text](images/Deployment_VM/image-43.png)
 
 Now lets return to the Google Cloud console
 
-![alt text](images/Deployment/image-38.png)
+![alt text](images/Deployment_VM/image-38.png)
 
 Click on "VM instances" on the left column, to return to VM list
 
-![alt text](images/Deployment/image-39.png)
+![alt text](images/Deployment_VM/image-39.png)
 
 You can see column "External IP", and once you move your mouse there, there will be "Copy" icon. Click on it to copy this address.
 
 
 Now open the new window and paste this address to the address bar
 
-![alt text](images/Deployment/image-40.png)
+![alt text](images/Deployment_VM/image-40.png)
 
 Note: be sure the address is HTTP, not HTTPS. We are only providing HTTP, so the address must be "http://34.136.174.45" (replace with your IP address)
 
 Now you can see the application is working:
 
-![alt text](images/Deployment/image-41.png)
+![alt text](images/Deployment_VM/image-41.png)
 
 Let's send POST request with name:
 
-![alt text](images/Deployment/image-42.png)
+![alt text](images/Deployment_VM/image-42.png)
 
 Excellent!
 
@@ -241,13 +263,13 @@ First you need to get the absolute path of your app
 ```bash
 pwd
 ```
-![alt text](images/Deployment/image-48.png)
+![alt text](images/Deployment_VM/image-48.png)
 
 You will need to create this file, using nano editor:
 ```bash
 nano demo.service
 ```
-![alt text](images/Deployment/image-45.png)
+![alt text](images/Deployment_VM/image-45.png)
 
 Copy this text, and make necessary edits.
 ```
@@ -268,11 +290,11 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
-![alt text](images/Deployment/image-51.png)
+![alt text](images/Deployment_VM/image-51.png)
 
 Press Ctrl-X to exit. Press **Y** to save the file, and **Enter** to confirm
 
-![alt text](images/Deployment/image-52.png)
+![alt text](images/Deployment_VM/image-52.png)
 
 Add your user to SUDOER list (grant him admin rights for this task).
 Run
@@ -286,7 +308,7 @@ root    ALL=(ALL:ALL) ALL
 sirius7_ai ALL=(ALL) NOPASSWD: /home/sirius7_ai/cloud_workshop/helloworld/venv/bin/python3
 ```
 
-![alt text](images/Deployment/image-50.png)
+![alt text](images/Deployment_VM/image-50.png)
 
 Press Ctrl-X to exit and **Y** to confirm save. 
 
@@ -313,6 +335,24 @@ sudo systemctl status demo.service
 ```
 
 Now if you exit SSH terminal, your gunicorn server with your app will work. If you stop and start again your VM it will run, but the IP address will change.
+
+## 12. Stopping / Deleting the VM
+
+On the **"Virtual Machines"** section of the **Compute Engine** you can see the list of your VM's 
+
+![alt text](images/Deployment_VM/image-53.png)
+
+If you press three dots in the end of the row. Pressing it you will see control buttons.
+
+![alt text](images/Deployment_VM/image-54.png)
+
+Press **Stop** to stop, and if you want **Delete** to delete this VM
+
+Note: if you stop VM of free tier, like we use here (e2micro), if you have paid account, you will start billing for it's disc, and for Static IP if you will use such. 
+
+![alt text](images/Deployment_VM/image-55.png)
+
+To avoid unnecessary charges, you can consider deleting or resizing persistent disks that are no longer needed, and releasing any reserved static IP addresses that are not in use. Additionally, you can delete the entire VM instance if you do not plan to use it in the near future, as you will not incur charges for the VM itself when it is stopped.
 
 # Advanced topics
 
@@ -346,13 +386,5 @@ This could be made as a script for usability
 You'll need a webhook receiver application or service running on your VM to receive payloads from the Git repository whenever changes are made. This could be a simple web server or an application designed to handle webhook events.
 
 3. CI/CD Pipeline with Jenkins, GitLab CI/CD, or GitHub Actions::
-You'll need a webhook receiver application or service running on your VM to receive payloads from the Git repository whenever changes are made. This could be a simple web server or an application designed to handle webhook events.
-
-## 4. Containers
-
-Containers are like virtual machines, but lighter and more flexible. They package everything an app needs to run - code, runtime, libraries - into a single unit that can run anywhere. While they're a bit trickier to learn than traditional VMs. You need to know what is Docker and how it works to use them, and they offer some benefits.
-
-Google Cloud has some tools to make container deployment easier:
-
-- **Cloud Run**: Lets you deploy containers in a easy way.
-- **Cloud Build**: Handles the creating of containers and CI/CD pipelines.
+You'll need to install and configure the respective CI/CD tool on your VM. This involves setting up the necessary server environment, installing the CI/CD tool, and configuring it to monitor your Git repository.
+Depending on the tool, you may also need to define configuration files (e.g., Jenkinsfile, .gitlab-ci.yml, .github/workflows/*.yml) in your repository to specify the steps of the CI/CD pipeline.

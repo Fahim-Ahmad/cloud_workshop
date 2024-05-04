@@ -5,7 +5,8 @@ In this workshop, you will explore and try Cloud Technology. You are expected to
 - [Learning Objectives](README.md#learning-objectives)
 - [Prep work](README.md#prep-work)
 - [Workshop Outline](README.md#workshop-outline)
-- [Deployment](Deployment.md)
+- [Deployment to App Engine (that we will use)](Deployment_AppEngine.md)
+- [Deployment to Virtual Machine (for advanced study)](Deployment_VM.md)
 - [Suggested Study](<Suggested Study.md>)
 
 ## Learning Objectives
@@ -45,7 +46,7 @@ Advanced:
     - Computing
     - Storage
     - Networking
-- ✔️✔️ You understand containers and related cloud services.
+- ✔️✔️ You understand the difference between different deployment options.
 - ✔️✔️ You understand load balancing and scalability.
 
 
@@ -53,10 +54,11 @@ Advanced:
 
 - 🥚 You can create an account and login on Google Cloud Platform console.
 - 🥚 You can navigate in Google Cloud Platform console
-- 🥚🥚 You can start a virtual machine (VM) on GCP.
-- ✔️ You can log in to this VM, clone your code, install packages, and run your application as a service.
-- ✔️ You can obtain an IP address of your VM with a working application and share it.
-- ✔️✔️ You can make a container with your application and deploy it.
+- 🥚🥚 You now several options for deploying application to cloud
+- ✔️ You can configure you application for deploying to Google App Engine.
+- ✔️ You can deploy your to Google App Engine.
+- ✔️✔️ You can use additional Google Cloud service for your needs
+
 
 ## Prep work
 
@@ -131,7 +133,7 @@ After discussion, the workshop instructor provides an understandable answer if n
 - (Optional) Discussion - what cloud services we use daily?
 - History note. GCP, AWS, Azure.
 - Types of cloud services: IaaS, PaaS, SaaS.
-- Example of deployed application (explanation and scheme of online shopping application working in the cloud)
+- Several ways of deploying an application to cloud.
 - Discussion: do we always need cloud for our applications?
 - Pros and cons of Cloud
 
@@ -140,35 +142,34 @@ After discussion, the workshop instructor provides an understandable answer if n
 > ~ 12 mins
 
 Instructor introduces the [deployment objectives](README.md#deployment).
-Instructor shows a demonstration, taking steps described in [Deployment](Deployment.md) document.
+Instructor shows a demonstration, taking steps described in [Deployment](Deployment_AppEngine.md) document.
 
-You will be able to reach just-deployed application from your local device using the IP address, that will be shared.
+You will be able to reach just-deployed application from your local device using the address, that will be shared.
 
-### [Deployment breakout activity](Deployment.md) (small groups) 
+### [Deployment breakout activity](Deployment_AppEngine.md) (small groups) 
 
 > ~ 20 mins
 
 You will work in small groups to repeat the deployment process.
 You will either deploy your prepared app or provided sample application. You are not expected to finish all the required steps, but it is a reachable goal. In case you did not have enough time, you can finish deployment after the workshop.
 
-All required steps and commands are described in this [Deployment](Deployment.md) document.
+All required steps and commands are described in this [Deployment](Deployment_AppEngine.md) document.
 
-In the end, you will obtain an IP address with a working application you can share.
+In the end, you will obtain an address with a working application you can share.
 
 After breakout:
-- Sharing IP's with the group, and seeing each other work
+- Sharing your deployed applications, and seeing each other work
 - Breakout discussion
 
 ### More on cloud (all together)
 
 > ~ 12 mins
 
-- How turn IP address to a good looking address name
+- Advanced topic for App Engine Deployment - Storage, CI/CD
 - Note about Cloud costs, free tier, billing, and setting limits
 - Cloud services: Computing, Storage, Networking
 - Cloud for ML and AI
-- Containers, CI/CD, Kubernetes
-- Load balancing and Scalability of the Cloud
+- Containers, Kubernetes, Load balancing and Scalability of the Cloud
 - Examples / Case studies - big scale services, deployed in Cloud. (i.e. Spotify)
 
 ### Questions
