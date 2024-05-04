@@ -253,14 +253,22 @@ And after a while, it is done:
 
 ## 10. Visit just created endpoint of your application
 
-Copy this [address](https://mitcloudworkshop.uc.r.appspot.com) 
+Copy address from this line:
 
 ![alt text](images/Deployment_AppEngine/image-54.png)
-
 
 and paste it to the new tab of your browser:
 
 ![alt text](images/Deployment_AppEngine/image-55.png)
+
+You can alternatively enter:
+```bash
+gcloud app browse
+```
+It will either open new tab with the application address, our output clickable address of it:
+
+![alt text](images/Deployment_AppEngine/image-1.png)
+
 
 The app is working! 
 
@@ -272,6 +280,7 @@ Let's try to input data and see if our code modification works:
 
 ![alt text](images/Deployment_AppEngine/image-58.png)
 
+> Note: you could check the app deployed in this tutorial [here](https://mitcloudworkshop.uc.r.appspot.com/) 
 
 ## 11. Explore Google Cloud App Engine Console with information and logs
 
