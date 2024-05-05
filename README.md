@@ -5,6 +5,7 @@ In this workshop, you will explore and try Cloud Technology. You are expected to
 - [Learning Objectives](README.md#learning-objectives)
 - [Prep work](README.md#prep-work)
 - [Workshop Outline](README.md#workshop-outline)
+- [Slides](slides)
 - [Deployment to App Engine (that you will use)](Deployment_AppEngine.md)
 - [Deployment to Virtual Machine (for advanced study)](Deployment_VM.md)
 - [Suggested Study](<Suggested Study.md>)
@@ -168,7 +169,7 @@ After breakout:
 - Advanced topic for App Engine Deployment - Storage, CI/CD
 - Note about Cloud costs, free tier, billing, and setting limits
 - Cloud services: Computing, Storage, Networking
-- Cloud for ML and AI
+- Cloud for ML, AI and Data Science
 - Containers, Kubernetes, Load balancing and Scalability of the Cloud
 - Examples / Case studies - big scale services, deployed in Cloud. (i.e. Spotify)
 
