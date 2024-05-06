@@ -5,8 +5,8 @@ In this workshop, you will explore and try Cloud Technology. You are expected to
 - [Learning Objectives](README.md#learning-objectives)
 - [Prep work](README.md#prep-work)
 - [Workshop Outline](README.md#workshop-outline)
-- [Slides](slides)
-- [Deployment to App Engine (that you will use)](Deployment_AppEngine.md)
+- [Slides](slides/README.md)
+- [Deployment to App Engine](Deployment_AppEngine.md)
 - [Deployment to Virtual Machine (for advanced study)](Deployment_VM.md)
 - [Suggested Study](<Suggested Study.md>)
 

@@ -1,3 +1,3 @@
 # Cloud workshop presentation
 
-## 1 [Presentation](<Cloud Workshop.pptx>)
+## 1 [Presentation](README.md)

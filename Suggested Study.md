@@ -10,7 +10,6 @@ We also presented two manuals for deployment on GCP, each with details and advan
 
 ## Deployment to GCP:
 
-
 ### App Engine
 
 [**Workshop manual for deployment to App Engine**](Deployment_AppEngine.md)
