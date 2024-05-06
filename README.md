@@ -2,12 +2,15 @@
 
 In this workshop, you will explore and try Cloud Technology. You are expected to have knowledge of Python, algorithms, and computational thinking. You may know SDLC and Data Science. You have probably written a lot of code. This workshop will focus on what happens after your code leaves your local computer, in theory and practice.
 
+## Content
+
 - [Learning Objectives](README.md#learning-objectives)
 - [Prep work](README.md#prep-work)
 - [Workshop Outline](README.md#workshop-outline)
-- [Slides](slides/README.md)
+- [Slides](<slides/Cloud Workshop.pdf>)
 - [Deployment to App Engine](Deployment_AppEngine.md)
 - [Deployment to Virtual Machine (for advanced study)](Deployment_VM.md)
+- [**Workshop recording** (hosted 2024-05-06)](https://mit.zoom.us/rec/share/uChwgyH855iWaVZHsuLtU2qtso1Cq_HdEiCYgZ8knSUQNo7VOIFxem8SWRy5XQUJ.yn-ELSJXkd044x8z)
 - [Suggested Study](<Suggested Study.md>)
 
 ## Learning Objectives
@@ -123,24 +126,22 @@ After discussion, the workshop instructor provides an understandable answer if n
 - Requests and responses
 - API
 - Web application, Flask
-- Discussion: how much should a programmer/data scientist know about networking?
 
 ### Cloud (all together)
 
 > ~ 15 mins
 
 - Introduction to the [cloud learning objectives](README.md#cloud-technology).
-- Discussion - what cloud services we use daily?
-- What cloud is. Difference between local infrastructure and clouds. 
-- History note. GCP, AWS, Azure.
-- Types of cloud services: IaaS, PaaS, SaaS.
-- Several ways of deploying an application to cloud.
-- Discussion: do we always need cloud for our applications?
-- Pros and cons of Cloud
+- What is Cloud? 
+- Difference between local infrastructure vs Cloud
+- History note. GCP, AWS, Azure
+- Types of cloud services: IaaS, PaaS, SaaS
+- Several ways of deploying an application to Cloud
+- Costs in Cloud
 
 ### Deployment demonstration (all together)
 
-> ~ 12 mins
+> ~ 20 mins
 
 Instructor introduces the [deployment objectives](README.md#deployment).
 Instructor shows a demonstration, taking steps described in [Deployment](Deployment_AppEngine.md) document.
@@ -161,6 +162,7 @@ In the end, you will obtain an address with a working application you can share.
 After breakout:
 - Sharing your deployed applications, and seeing each other work
 - Breakout discussion
+- Discussion: how much a data scientist should know about networking and cloud?
 
 ### More on cloud (all together)
 
@@ -168,7 +170,6 @@ After breakout:
 
 - Cloud services: Computing, Storage, Networking
 - Cloud for ML and AI, Big Data, Cloud Marketplace
-- Costs in Cloud
 - Further topics:
     - Storage, SQL
     - Big Data
@@ -181,3 +182,5 @@ After breakout:
 ### Questions
 
 > ~ 5 mins
+
+### Thank you
