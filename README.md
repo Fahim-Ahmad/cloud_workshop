@@ -130,8 +130,8 @@ After discussion, the workshop instructor provides an understandable answer if n
 > ~ 15 mins
 
 - Introduction to the [cloud learning objectives](README.md#cloud-technology).
+- Discussion - what cloud services we use daily?
 - What cloud is. Difference between local infrastructure and clouds. 
-- (Optional) Discussion - what cloud services we use daily?
 - History note. GCP, AWS, Azure.
 - Types of cloud services: IaaS, PaaS, SaaS.
 - Several ways of deploying an application to cloud.
@@ -169,8 +169,10 @@ After breakout:
 - Advanced topic for App Engine Deployment - Storage, CI/CD
 - Note about Cloud costs, free tier, billing, and setting limits
 - Cloud services: Computing, Storage, Networking
-- Cloud for ML, AI and Data Science
-- Containers, Kubernetes, Load balancing and Scalability of the Cloud
+- Cloud for ML
+- Big Data
+- Cloud Marketplace
+- Scaling, Load Balancing, Kubernetes
 - Examples / Case studies - big scale services, deployed in Cloud. (i.e. Spotify)
 
 ### Questions
