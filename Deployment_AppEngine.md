@@ -11,6 +11,8 @@ In this manual, you will go through a step-by-step process of deploying web flas
 
 This deployment is based on the [Google App Engine Standard for Python3 documentation](https://cloud.google.com/appengine/docs/standard/python3/runtime). 
 
+## [There is a short version of this manual, with much less screenshots, you may find it easier to use during breakout](Deployment_AppEngine_short.md)
+
 ## Table of Contents
 
 1. [Create account and login to GCP](#1-create-account-and-login-to-gcp)
