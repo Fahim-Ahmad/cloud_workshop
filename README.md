@@ -166,14 +166,17 @@ After breakout:
 
 > ~ 12 mins
 
-- Advanced topic for App Engine Deployment - Storage, CI/CD
-- Note about Cloud costs, free tier, billing, and setting limits
 - Cloud services: Computing, Storage, Networking
-- Cloud for ML
-- Big Data
-- Cloud Marketplace
-- Scaling, Load Balancing, Kubernetes
-- Examples / Case studies - big scale services, deployed in Cloud. (i.e. Spotify)
+- Cloud for ML and AI, Big Data, Cloud Marketplace
+- Costs in Cloud
+- Further topics:
+    - Storage, SQL
+    - Big Data
+    - Containers
+    - Continuous Integration / Continuous Deployment
+    - Scaling Load Balancing
+    - ML and AI in Cloud
+- Example of Cloud web application
 
 ### Questions
 

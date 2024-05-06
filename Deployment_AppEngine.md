@@ -379,5 +379,5 @@ Note that App Engine deployment are stateless. There is no way for them to store
 - Cloud Datastore: Designed as a highly scalable NoSQL database, Cloud Datastore offers App Engine applications a robust and fully managed solution for storing and querying structured data. 
 - Cloud SQL: As a fully managed relational database service, Cloud SQL enables App Engine applications to leverage the power of traditional SQL databases like MySQL, PostgreSQL, and SQL Server. With Cloud SQL, developers can easily create, manage, and scale relational databases without worrying about infrastructure management. 
 
-To use this option you will need to use API and corresponding libraries in your code. More info could be read in [documentation](https://cloud.google.com/appengine/docs/standard/storage-options).
+To use this option you will need to use API and corresponding libraries in your code, so it may require rewriting some parts of your application. More info could be read in [documentation](https://cloud.google.com/appengine/docs/standard/storage-options).
 Note that options may incur costs after the free trial period, but some of them also have an amount of free tier allowance.
