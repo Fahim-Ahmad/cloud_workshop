@@ -67,19 +67,24 @@ def computation_page():
     """
     # Here we take the string from the input filed in form of the HTML file
     # In the POST form of HTML there is:
-    # <input type="text" id="name" name="input_data1" required>
-    # where name="input_data1" specify how you will address the data in POST request
+    # <input type="text" id="name" name="name" required>
+    # where name="name" specify how you will address the data in POST request
     # that we are processing now
 
-    input_data1 = flask.request.form['input_data1']
-
+    user_name = flask.request.form['user_name']
     # Apply desired computation
-    processed_data1 = my_basic_computation(input_data1)
+    user_name = my_basic_computation(user_name)
+
+    cohort = flask.request.form['cohort']
+    education = flask.request.form['education']
 
     # this method renders the HTML template, using our data
     # inside the HTML template the string {{ processed_data1 }} will be replaced with
-    return flask.render_template('index.html', processed_data1=processed_data1)
-
+    return flask.render_template('index.html',
+                                 user_name=user_name,
+                                 cohort=cohort,
+                                 education=education
+                                 )
 
 if __name__ == '__main__':
     app.run(debug=True)
